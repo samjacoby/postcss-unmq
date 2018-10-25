@@ -28,18 +28,18 @@
 		"css-mediaquery": "^0.1.2",
 		"postcss": "^5.0.10"
 	},
-  "devDependencies": {
-    "eslint": "^1.7.3",
-    "tap-spec": "^4.1.0",
-    "tape": "^4.2.2"
-  },
-  "scripts": {
-    "lint": "eslint . --ignore-path .gitignore",
-    "test-fixtures": "tape test/*.js | tap-spec",
-    "test": "npm run lint && npm run test-fixtures"
-  },
-  "engines": {
-    "iojs": ">=2.0.0",
-    "node": ">=0.12.0"
-  }
+	"devDependencies": {
+		"eslint": "^1.7.3",
+		"tap-spec": "^4.1.0",
+		"tape": "^4.2.2"
+	},
+	"scripts": {
+		"lint": "eslint . --ignore-path .gitignore",
+		"test-fixtures": "tape test/*.js | tap-spec",
+		"test": "npm run lint && npm run test-fixtures"
+	},
+	"engines": {
+		"iojs": ">=2.0.0",
+		"node": ">=0.12.0"
+	}
 }

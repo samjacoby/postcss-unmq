@@ -51,7 +51,7 @@
 		"no-func-assign":              [2],
 		"no-unreachable":              [2],
 		"accessor-pairs":              [2],
-		"no-empty-label":              [2],
+		"no-labels":									 [2],
 		"no-fallthrough":              [2],
 		"no-path-concat":              [2],
 		"no-new-require":              [2],

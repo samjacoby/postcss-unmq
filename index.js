@@ -3,11 +3,12 @@ var postcss = require('postcss');
 var mediaQuery = require('css-mediaquery');
 
 var defaultOpts = {
-	type:       'screen',
-	width:      1024,
-	height:     768,
-	resolution: '1dppx',
-	color:      3
+	type:					'screen',
+	width:				1024,
+	height:				768,
+	resolution:		'1dppx',
+	color:				3,
+	preserveRule:	false
 };
 
 module.exports = postcss.plugin('postcss-unmq', function (opts) {
@@ -32,7 +33,9 @@ module.exports = postcss.plugin('postcss-unmq', function (opts) {
 	return function (css) {
 		css.walkAtRules('media', function (rule) {
 			if (mediaQuery.match(rule.params, opts)) {
-				rule.replaceWith(rule.nodes);
+				if (!opts.preserveRules) {
+					rule.replaceWith(rule.nodes);
+				}
 			} else {
 				rule.remove();
 			}
